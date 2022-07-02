@@ -9,7 +9,7 @@ import {
 import React from "react";
 import "../../sass/table.scss";
 
-function List() {
+function TableList() {
   const rows = [
     {
       id: 11454541,
@@ -141,7 +141,7 @@ function List() {
                   {row.method}
                 </TableCell>
                 <TableCell align="right" className="tableCell" align="left">
-                  {row.status}
+                  <span className={`${row.status}`}>{row.status}</span>
                 </TableCell>
               </TableRow>
             ))}
@@ -152,4 +152,4 @@ function List() {
   );
 }
 
-export default List;
+export default TableList;

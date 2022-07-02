@@ -1,0 +1,16 @@
+.table {
+  .Approved,
+  .Pending {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .Approved {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.151);
+  }
+  .Pending {
+    color: rgb(218, 44, 32);
+    background-color: rgba(240, 174, 74, 0.603);
+  }
+}

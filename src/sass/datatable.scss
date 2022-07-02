@@ -1,0 +1,43 @@
+.datatable {
+  height: 600px;
+  padding: 20px;
+
+  .active,
+  .inactive {
+    font-weight: bold;
+    height: 35px;
+    width: 80px;
+    padding: 6px 18px;
+    border-radius: 5px;
+  }
+  .active {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.151);
+  }
+  .inactive {
+    color: rgb(218, 44, 32);
+    background-color: rgba(240, 174, 74, 0.603);
+  }
+  .cellAction {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    .viewButton,
+    .editButton,
+    .deleteButton {
+      padding: 6px 10px;
+      border: 1px solid purple;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .viewButton {
+      color: rgb(14, 161, 14);
+    }
+    .editButton {
+      color: rgb(6, 89, 156);
+    }
+    .deleteButton {
+      color: rgb(161, 14, 14);
+    }
+  }
+}
