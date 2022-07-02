@@ -22,7 +22,7 @@ function Home() {
 
         <div className="charts">
           <Featured />
-          <Chart />
+          <Chart aspect={3 / 1} title="Last 7 Month (Revenue)" />
         </div>
 
         <div className="listContainer">
