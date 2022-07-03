@@ -1,9 +1,16 @@
 import { DriveFolderUploadOutlined } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "../../sass/newpage.scss";
+
 function Newpage({ inputs, title }) {
+  const [file, setFile] = useState("");
+
+  const onHandleChange = (e) => {
+    e.preventDefault();
+    setFile(e.target.files[0]);
+  };
   return (
     <div className="new">
       <Sidebar />
@@ -15,7 +22,11 @@ function Newpage({ inputs, title }) {
         <div className="bottomNew">
           <div className="left">
             <img
-              src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+              src={
+                file
+                  ? URL.createObjectURL(file)
+                  : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+              }
               alt="No img"
               className="userImg"
             />
@@ -26,7 +37,12 @@ function Newpage({ inputs, title }) {
                 <label htmlFor="file">
                   Image: <DriveFolderUploadOutlined className="icon" />
                 </label>
-                <input type="file" id="file" style={{ display: "none" }} />
+                <input
+                  type="file"
+                  id="file"
+                  onChange={onHandleChange}
+                  style={{ display: "none" }}
+                />
               </div>
               {/* <div className="formInput">
                 <label>First Name</label>
