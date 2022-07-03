@@ -48,7 +48,6 @@ function SinglePage() {
         </div>
         <div className="bottom">
           <h1 className="title">Last Transition</h1>
-
           <TableList />
         </div>
       </div>

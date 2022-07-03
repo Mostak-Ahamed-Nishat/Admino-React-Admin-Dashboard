@@ -6,8 +6,8 @@ import {
   NightlightOutlined,
   AspectRatio,
   NotificationsOutlined,
-  ChatBubbleOutlined,
   MenuOpenOutlined,
+  ChatBubbleOutline,
 } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 
@@ -38,7 +38,7 @@ function Navbar() {
           </div>
           <div className="item">
             <Badge badgeContent={4} color="secondary">
-              <ChatBubbleOutlined className="icon" />
+              <ChatBubbleOutline className="icon" />
             </Badge>
           </div>
           <div className="item">
